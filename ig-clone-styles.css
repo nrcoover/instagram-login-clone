@@ -1,0 +1,313 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --fb-blue: rgb(56, 81, 133);
+    --ig-blue: rgba(0, 140, 255, .9);
+}
+
+/* ---------- HTML, BODY ELEMENTS ---------- */
+html, body {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    font-family: 'Segoe UI','Roboto',Helvetica, Arial, sans-serif;
+
+    min-width: 450px;
+    min-height: 100vh
+    /* overflow-y: hidden; */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    
+
+    
+}
+
+section {
+    height: 610px;
+    margin-top: 3.45em;
+    width: 350px; 
+    
+    
+}
+
+a, a::before, a::after {
+    color: inherit;
+}
+
+
+
+/* ---------- LOGIN CONTAINER DECLERATIONS ---------- */
+.login-ctr,
+.sign-up-ctr,
+.get-app-ctr {
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(220, 220, 220);
+    display: flex;
+    flex-direction: column;
+    height: 62.25%;
+    justify-content: center;
+    margin-bottom: .6em;
+}
+
+.login-ctr > div {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.login-ctr > .logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: .15em auto .35em;
+}
+
+.login-ctr > .alt-options,
+.login-ctr > .login {
+    height: 35%;
+}
+
+.login-ctr > .alt-options {
+    align-items: center;
+}
+
+    /* --- LOGIN FORM DECLERATIONS --- */
+    .login form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login input {
+        background-color: #FAFAFA;
+        border: 1px solid rgb(220, 220, 220);
+        border-radius: .2em;
+        display: block;
+        font-family: inherit;
+        font-size: .78em;
+        margin-bottom: .5em;
+        padding: .8em .7em;
+    }
+
+    .login input::placeholder{
+        font-family: inherit;
+        color: rgb(138, 138, 138);
+        transform: translateY(5%);
+    }
+
+    .login input[value="Log In"] {
+        color: white;
+        background-color: var(--ig-blue);
+        border: 1px solid currentColor;
+        border-radius: .4em;
+        font-size: .81em;
+        font-weight: 500;
+        margin: .55em 0 .25em;
+        padding: .485em .7em .49em;
+    }
+
+    .login input[value="Log In"]:hover {
+        cursor: pointer;
+    }
+
+    /* --- LOGIN ALT-OPTIONS DECLERATIONS --- */
+    .or-separator {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: .8em 0;
+        width: 100%;
+    }
+
+    .or-separator div {
+        background-color: rgb(220, 220, 220);
+        height: 1px;
+        width: 50%;  
+    }
+
+    .or-separator p {
+        color: rgb(138, 138, 138);
+        font-size: 12.5px;
+        font-weight: 500;
+        padding: 0 1.4em;
+        text-transform: uppercase;
+        transform: translateY(5%);
+    }
+
+    .fb-login {
+        align-items: center;
+        display: flex;
+        font-weight: bolder;
+        padding: .85em;
+    }
+
+    .fb-login img {
+        height: 1em;;
+        width: 1em;
+    }
+
+    .fb-login h5 {
+        color: var(--fb-blue);
+        font-size: 14px;
+        font-weight: 600;
+        margin: .05em 0 .2em;
+        padding-left: .5em;
+        
+    }
+
+    .pw-forgot {
+        font-size: .78em;
+        padding-top: .3em;
+    }
+
+/* ---------- SIGN-UP CONTAINER DECLERATIONS ---------- */
+.sign-up-ctr {
+    height: 10.4%;
+}
+
+.sign-up-ctr p {
+    font-size: .9em;
+}
+
+.sign-up-ctr span {
+    color: var(--ig-blue);
+    font-weight: 500;
+}
+
+/* ---------- GET APP CONTAINER DECLERATIONS ---------- */
+.get-app-ctr {
+    background-color: transparent;
+    border: none;
+    height: 21.35%;
+    justify-content: flex-start;
+}
+
+.get-app-ctr p {
+    font-size: .9em;
+    padding: .5em 0 .3em;
+}
+
+.get-app-ctr > div {
+    display: flex;
+}
+
+.get-app-ctr div img {
+    height: 2.5em;
+    margin: 1.05em .25em;
+}
+
+    /* --- ALTERNATIVE GET APP IMAGES DESIGN --- */
+    /* .get-app-ctr input {
+        height: 4em;
+        width: 5em;
+    }
+
+    .get-app-ctr #app-store {
+        background-image: url(./images/IG-app-store-button.png);
+        background-size: cover;
+    }
+
+    .get-app-ctr #google-play {
+        background-image: url(./images/IG-Google-Play-Button.png);
+        background-size: cover;
+        background-position: center;
+    } */
+
+/* ---------- FOOTER DECLERATIONS ---------- */
+
+
+
+
+
+#page-ctr {
+    position: relative;
+    
+    min-height: 100vh;    
+}
+
+main {
+    border: 1px solid red;
+    padding-bottom: 2.5rem;
+    position: relative;
+    min-height: 630px;
+}
+
+footer {
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+
+
+footer {
+    color:rgb(138, 138, 138);
+    display: flex;
+    flex-direction: column;
+    font-size: .75em;
+    justify-content: flex-end;
+    margin: 0 auto;
+    /* padding: 2.7em 4em 5em; */
+    position: relative;
+    
+    width: 100%;
+    border: 1px solid green;
+    /* height: 200px;
+    min-height: 200px; */
+    
+    
+    
+}
+
+.footer-div-ctr {
+    /* align-items: center; */
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+    max-height: 100%;
+}
+
+.footer-div-ctr div {
+    text-align: center;
+}
+
+.footer-div-ctr > div:last-child {
+    /* flex-wrap: nowrap; */
+    padding: .85em 0;
+}
+
+.footer-div-ctr div > * {
+    display: inline-block;
+    padding: .215em .53em;
+}
+
+.footer-div-ctr select {
+    background-color: transparent;
+    border: none;
+    color:rgb(138, 138, 138);
+    font: inherit;
+    font-size: inherit;
+}
