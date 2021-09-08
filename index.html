@@ -37,16 +37,18 @@
                             pattern=".{1,}"
                             placeholder="Phone number, username, or email"
                             title="Must be a valid phone number, username, or email."
-                            type="text"
-                            required>
+                            onkeyup="stateHandle()"
+                            required
+                            type="text">
                         <input
                             id="password"
                             class="form-input"
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             placeholder="Password"
                             title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters."
-                            type="password"
-                            required>
+                            onkeyup="stateHandle()"
+                            required
+                            type="password">
                         <input
                             
                             name="submit"
