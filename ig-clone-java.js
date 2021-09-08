@@ -19,33 +19,14 @@ let password = document.querySelector("#password")
 let loginButton = document.querySelector("#login-btn");
 
 loginButton.disabled = true;
-username.addEventListener("change", checkUsername);
-password.addEventListener("change", checkPassword);
+username.addEventListener("change", stateHandle);
+password.addEventListener("change", stateHandle);
 
-checkUsername;
-checkPassword;
-disableButton;
-
-function checkUsername(a) {
-  if (a.value > 0) {
-    return true; 
+function stateHandle() {
+  if (username.value > 0 && password.value > 5 ) {
+    loginButton.disabled = true; 
   } else {
-    return false;
-}
-
-function checkPassword(b) {
-  if (b.value > 5) {
-    return true; 
-  } else {
-    return false;
-}
-
-function disableButton() {
-  if (checkUsername && checkPassword == true ) {
     loginButton.disabled = false;
-    loginButton.enabled = true; 
-  } else {
-    loginButton.disabled = true;
-    loginButton.enabled = false;
   }
 }
+
