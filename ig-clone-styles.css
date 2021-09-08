@@ -140,10 +140,13 @@ input[type="password"]:focus {
         padding: .8em .7em;
     }
 
-    .login input::placeholder{
+    .login input::placeholder {
         font-family: inherit;
         color: var(--ig-grey-medium);
-        transform: translateY(5%);
+    }
+
+    .login input::placeholder:focus {
+        transform: translate(15%);
     }
 
     .login input[value="Log In"] {
@@ -162,9 +165,14 @@ input[type="password"]:focus {
         cursor: pointer;
     }
 
-    /* .login input[value="Log In"]:disabled {
-        opacity: .6;
-    } */
+    .login input[value="Log In"]:disabled {
+        cursor: inherit;
+        opacity: .35;
+    }
+
+    .login input[value="Log In"]:enabled {
+        opacity: 1;
+    }
 
     /* --- LOGIN ALT-OPTIONS DECLERATIONS --- */
     .or-separator {
