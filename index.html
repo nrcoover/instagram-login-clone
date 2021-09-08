@@ -12,8 +12,16 @@
 </head>
 <body>
     <main>
-        <!-- <section class="photos-container">    
-        </section> -->
+        <section class="photos-ctr">
+            <img src="images/IG-phones-original.png" alt="Two smart phone, one black, one white, the white one overlapping the other; both phone screen display example images from the website.">
+            <div id="phone-display">
+                <img id="image-1" src="images/IG-phone1.jpg" alt="A woman standing in front of many tall cacti.">
+                <img id="image-2" src="images/IG-phone2.jpg" alt="A potted orange Desert Cabbage against a blue wall.">
+                <img id="image-3" src="images/IG-phone3.jpg" alt="Text conversation contianing images of cats and cat puns.">
+                <img id="image-4" src="images/IG-phone4.jpg" alt="Top view of a green Tree Aeonium plant.">
+                <img id="image-5" src="images/IG-phone5.jpg" alt="Instagram profile display for Jane Appleseed.">
+            </div>
+        </section>
 
         <section class="details-ctr">
             <div class="login-ctr">
@@ -21,19 +29,23 @@
                     <img src="images/IG-Logo.PNG" alt="Instragram logo; the text reads 'Instagram', written in the platform's iconic cursive font.">
                 </div>
                 <div class="login">
-                    <form >
+                    <form action="#">
                         <input 
-                            type="text"
+                            pattern=".{8,}"
                             placeholder="Phone number, username, or email"
+                            title="Must be a valid phone number, username, or email."
+                            type="text"
                             required>
                         <input
-                            type="password"
+                            pattern=".{8,}"
                             placeholder="Password"
+                            title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters."
+                            type="password"
                             required>
                         <input
-                            type="button"
+                            name="submit"
+                            type="submit"
                             value="Log In">
-                    </form>
                 </div>
                 <div class="alt-options">
                     <div class="or-separator">
