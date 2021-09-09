@@ -30,27 +30,42 @@
                 </div>
                 <div class="login">
                     <form id="login-form" action="#">
-                        <input 
-                            id="username"
-                            class="form-input"
-                            name="username"
-                            pattern=".{1,}"
-                            placeholder="Phone number, username, or email"
-                            title="Must be a valid phone number, username, or email."
-                            onkeyup="stateHandle()"
-                            required
-                            type="text">
+                        <div>
+                            <input 
+                                id="username"
+                                class="form-input"
+                                name="username"
+                                pattern=".{1,}"
+                                placeholder="Phone number, username, or email"
+                                title="Must be a valid phone number, username, or email."
+
+                                onfocus="labelSwitch()"
+                                onkeydown="labelSwitch()"
+                                
+                                onkeyup="stateHandle()"
+                                required
+                                type="text">
+                            <span class="floating-label">Phone number, username, or email</span>
+                        </div>
+                        <div>
+                            <input
+                                id="password"
+                                class="form-input"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                placeholder="Password"
+                                title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters."
+
+                                onfocus="labelSwitch()"
+                                onkeydown="labelSwitch()"
+
+
+
+                                onkeyup="stateHandle()"
+                                required
+                                type="password">
+                            <span class="floating-label">Password</span>
+                        </div>
                         <input
-                            id="password"
-                            class="form-input"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            placeholder="Password"
-                            title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters."
-                            onkeyup="stateHandle()"
-                            required
-                            type="password">
-                        <input
-                            
                             name="submit"
                             id="login-btn"
                             type="submit"

@@ -15,3 +15,22 @@ function stateHandle() {
     loginButton.disabled = true;
   }
 }
+
+// FLOATING LABEL MOVEMENT TRIGGER BUTTON
+
+function labelSwitch() {
+  let floatLabel = document.getElementsByClassName("floating-label");
+  let placeholder = document.getElementsByClassName("form-input").placeholder;
+  let formInput = document.getElementsByClassName("form-input");
+
+  styleSheet.insertRule(".login .floating-label {visibility: hidden;}", 100);
+
+
+  // floatLabel.style.visibility = "hidden";
+
+  // if (formInput.value.length > 0) {
+  //   floatLabel.style.visibility = "hidden";
+  // } else {
+  //   floatLabel.style.visibility = "visible";
+  // }
+}

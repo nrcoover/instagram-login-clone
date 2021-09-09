@@ -129,6 +129,7 @@ input[type="password"]:focus {
         flex-direction: column;
     }
 
+    .login div > input,
     .login input {
         background-color: #FAFAFA;
         border: 1px solid var(--ig-grey-light);
@@ -138,16 +139,34 @@ input[type="password"]:focus {
         font-size: .78em;
         margin-bottom: .5em;
         padding: .8em .7em;
+        width: 100%;
     }
 
-    .login input::placeholder {
+    .login input::placeholder, 
+    .login .floating-label {
         font-family: inherit;
         color: var(--ig-grey-medium);
     }
 
-    .login input::placeholder:focus {
-        transform: translate(15%);
+    .login .floating-label {
+        /* visibility: hidden; */
     }
+
+
+
+
+
+
+    /* .login .floating-label:focus {
+        visibility: visible;
+    } */
+
+    /* .login input:focus::placeholder {
+        transform: translate(-11%, -40%);
+        font-size: .78em;
+        padding-bottom: 2em;
+        text-align: left;
+    } */
 
     .login input[value="Log In"] {
         color: white;
@@ -312,6 +331,100 @@ input[type="password"]:focus {
     font: inherit;
     font-size: inherit;
 }
+
+
+
+
+
+form > div {
+    position: relative;  
+}
+
+input::placeholder {
+    opacity: 0;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+    
+}
+
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+    transform: translate(6%,-90%);
+    font-size: .60em;
+    /* visibility: inherit; */
+}
+
+input:focus:valid.floating-label {
+    opacity: 0;
+}
+
+/* .form-input {
+    font-size: 14px;
+    width: 200px;
+    height: 35px;
+} */
+
+.floating-label {
+    position: absolute;
+    /* pointer-events: none; */
+    left: 0;
+    top: 50%;
+    transform: translate(1.5%, -58%);
+    transition: 0.08s ease all;
+    
+    display: block;
+    font-family: inherit;
+    font-size: .78em;
+    margin-bottom: .5em;
+    padding: .8em .7em;
+}
+
+
+
+
+
+/* background-color: #FAFAFA;
+border: 1px solid var(--ig-grey-light);
+border-radius: .2em; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------- MEDIA QUERIES ---------- */
 @media only screen and (max-width: 450px) {
