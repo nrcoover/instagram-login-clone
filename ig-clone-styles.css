@@ -28,7 +28,7 @@ body {
     overflow-y:scroll;
 
     /* overflow-x: hidden; */
-    /* min-width: 650px; */
+    min-width: 650px;
     /* overflow-y: hidden; */
 }
 
@@ -62,24 +62,6 @@ footer {
 a, a::before, a::after {
     color: inherit;
 }
-
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-    outline: none;
-    border: 1px solid rgba(138, 138, 138, .9) !important;
-}
-
-/* ALTERNATE INPUT:FOCUS BORDER TRICK */
-
-    /* QUESTION: Why is !important necessary to make the above rule function? (I had heard that !important should be used seldomly; is this one of those rare exceptions in which its use is appropriate? Or have I made a mistake elsewhere with my specificity?) This method was recommended via a CSS Tricks forum: https://css-tricks.com/forums/topic/border-radius-for-outline/ */
-
-    /* input:focus {
-    box-shadow:
-        1px 1px var(--ig-grey-dark),
-        -1px -1px var(--ig-grey-dark);
-    outline: none;
-    } */
 
 .photos-ctr {
     display: none;
@@ -124,6 +106,38 @@ input[type="password"]:focus {
 }
 
     /* --- LOGIN FORM DECLERATIONS --- */
+    .login .form-group {
+        /* opacity: 1; */
+        position: relative;
+        transition: all .3s;
+    }
+
+        .form-group .floating-label {
+            color: var(--ig-grey-medium);
+            display: block;
+            font-size: .78em;
+            position: absolute;
+            transform: translate(.78em, -2.65em);
+            transform-origin: 0 0;
+            transition: all .3s;
+            z-index: 1;
+        }
+        
+        input:not(:placeholder-shown) + .floating-label {
+            transform: translate(.75em, -3.2em) scale(.8);
+        }
+
+        #username:not(:placeholder-shown),
+        #password:not(:placeholder-shown) {
+
+            padding-bottom: .35em;
+            padding-top: 1.25em;
+        }
+
+        .floating-label {
+            cursor: text;
+        }
+
     .login form {
         display: flex;
         flex-direction: column;
@@ -132,22 +146,46 @@ input[type="password"]:focus {
     .login input {
         background-color: #FAFAFA;
         border: 1px solid var(--ig-grey-light);
+        /* box-shadow: none; */
         border-radius: .2em;
         display: block;
         font-family: inherit;
         font-size: .78em;
         margin-bottom: .5em;
+        /* transition: all .5s; */
         padding: .8em .7em;
+        width: 100%;
     }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+    border: 1px solid rgba(138, 138, 138, .7) !important;
+    /* box-shadow: none; */
+    outline: none;
+}
+
+    /* ALTERNATE INPUT:FOCUS BORDER TRICK */
+
+    /* QUESTION: Why is !important necessary to make the above rule function? (I had heard that !important should be used seldomly; is this one of those rare exceptions in which its use is appropriate? Or have I made a mistake elsewhere with my specificity?) This method was recommended via a CSS Tricks forum: https://css-tricks.com/forums/topic/border-radius-for-outline/ */
+
+    /* input:focus {
+    box-shadow:
+        1px 1px var(--ig-grey-dark),
+        -1px -1px var(--ig-grey-dark);
+    outline: none;
+    } */
+
 
     .login input::placeholder {
         font-family: inherit;
-        color: var(--ig-grey-medium);
+        /* color: var(--ig-grey-medium); */
+        color: transparent;
     }
 
-    .login input::placeholder:focus {
+
+    /* .login input::placeholder:focus {
         transform: translate(15%);
-    }
+    } */
 
     .login input[value="Log In"] {
         color: white;
