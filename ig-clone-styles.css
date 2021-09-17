@@ -28,7 +28,7 @@ body {
     overflow-y:scroll;
 
     /* overflow-x: hidden; */
-    min-width: 650px;
+    /* min-width: 650px; */
     /* overflow-y: hidden; */
 }
 
@@ -107,7 +107,6 @@ a, a::before, a::after {
 
     /* --- LOGIN FORM DECLERATIONS --- */
     .login .form-group {
-        /* opacity: 1; */
         position: relative;
         transition: all .3s;
     }
@@ -119,8 +118,29 @@ a, a::before, a::after {
             position: absolute;
             transform: translate(.78em, -2.65em);
             transform-origin: 0 0;
-            transition: all .3s;
+            transition: all .1s;
             z-index: 1;
+        }
+
+        .form-group button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            right: 0;
+            top: 0;
+            transform: translate(-.75em, .75em);
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .form-group button:active {
+            opacity: .6;
+        }
+
+        input:not(:placeholder-shown) ~ #show-btn {
+            visibility: visible;
         }
         
         input:not(:placeholder-shown) + .floating-label {
@@ -129,7 +149,6 @@ a, a::before, a::after {
 
         #username:not(:placeholder-shown),
         #password:not(:placeholder-shown) {
-
             padding-bottom: .35em;
             padding-top: 1.25em;
         }

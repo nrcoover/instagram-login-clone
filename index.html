@@ -51,11 +51,14 @@
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 placeholder="Password"
                                 title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters."
-                                onkeyup="stateHandle()"
+                                onkeypress="stateHandle()"
+                                onkeyup="stateHandleUp()"
                                 required
                                 tabindex="2"
                                 type="password">
                             <label class="floating-label" for="password">Password</label>
+                            <button id="show-btn" onclick="showPassword()" type="button">Show</button>
+                            <button id="hide-btn" onclick="showPassword()" type="button">Hide</button>
                         </div>
                         <input
                             name="submit"
