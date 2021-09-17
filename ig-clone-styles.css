@@ -26,10 +26,6 @@ body {
     min-width: 320px;
     font-family: 'Segoe UI','Roboto',Helvetica, Arial, sans-serif;
     overflow-y:scroll;
-
-    /* overflow-x: hidden; */
-    /* min-width: 650px; */
-    /* overflow-y: hidden; */
 }
 
 main {
@@ -63,14 +59,14 @@ a, a::before, a::after {
     color: inherit;
 }
 
-.photos-ctr {
+#photos-ctr {
     display: none;
 }
 
 /* ---------- LOGIN CONTAINER DECLERATIONS ---------- */
-.login-ctr,
-.sign-up-ctr,
-.get-app-ctr {
+#login-ctr,
+#sign-up-ctr,
+#get-app-ctr {
     align-items: center;
     background-color: white;
     border: 1px solid var(--ig-grey-light);
@@ -81,7 +77,7 @@ a, a::before, a::after {
     margin-bottom: .6em;
 }
 
-.login-ctr > div {
+#login-ctr > div {
     display: flex;
     flex-direction: column;
     height: 30%;
@@ -89,24 +85,24 @@ a, a::before, a::after {
     width: 80%;
 }
 
-.login-ctr > .logo {
+#login-ctr #logo {
     align-items: center;
     display: flex;
     justify-content: center;
     margin: .15em auto .4em;
 }
 
-.login-ctr > .alt-options,
-.login-ctr > .login {
+#login-ctr #alt-options,
+#login-ctr #login {
     height: 35%;
 }
 
-.login-ctr > .alt-options {
+#login-ctr #alt-options {
     align-items: center;
 }
 
     /* --- LOGIN FORM DECLERATIONS --- */
-    .login .form-group {
+    #login .form-group {
         position: relative;
         transition: all .3s;
     }
@@ -157,56 +153,35 @@ a, a::before, a::after {
             cursor: text;
         }
 
-    .login form {
+    #login form {
         display: flex;
         flex-direction: column;
     }
 
-    .login input {
+    #login input {
         background-color: #FAFAFA;
         border: 1px solid var(--ig-grey-light);
-        /* box-shadow: none; */
         border-radius: .2em;
         display: block;
         font-family: inherit;
         font-size: .78em;
         margin-bottom: .5em;
-        /* transition: all .5s; */
         padding: .8em .7em;
         width: 100%;
     }
 
     input[type="text"]:focus,
     input[type="password"]:focus {
-    border: 1px solid rgba(138, 138, 138, .7) !important;
-    /* box-shadow: none; */
-    outline: none;
-}
+        border: 1px solid rgba(138, 138, 138, .7) !important;
+        outline: none;
+    }
 
-    /* ALTERNATE INPUT:FOCUS BORDER TRICK */
-
-    /* QUESTION: Why is !important necessary to make the above rule function? (I had heard that !important should be used seldomly; is this one of those rare exceptions in which its use is appropriate? Or have I made a mistake elsewhere with my specificity?) This method was recommended via a CSS Tricks forum: https://css-tricks.com/forums/topic/border-radius-for-outline/ */
-
-    /* input:focus {
-    box-shadow:
-        1px 1px var(--ig-grey-dark),
-        -1px -1px var(--ig-grey-dark);
-    outline: none;
-    } */
-
-
-    .login input::placeholder {
+    #login input::placeholder {
         font-family: inherit;
-        /* color: var(--ig-grey-medium); */
         color: transparent;
     }
 
-
-    /* .login input::placeholder:focus {
-        transform: translate(15%);
-    } */
-
-    .login input[value="Log In"] {
+    #login input[value="Log In"] {
         color: white;
         background-color: var(--ig-blue);
         border: 1px solid currentColor;
@@ -218,21 +193,21 @@ a, a::before, a::after {
         padding: .38em .7em;
     }
 
-    .login input[value="Log In"]:hover {
+    #login input[value="Log In"]:hover {
         cursor: pointer;
     }
 
-    .login input[value="Log In"]:disabled {
+    #login input[value="Log In"]:disabled {
         cursor: inherit;
         opacity: .35;
     }
 
-    .login input[value="Log In"]:enabled {
+    #login input[value="Log In"]:enabled {
         opacity: 1;
     }
 
     /* --- LOGIN ALT-OPTIONS DECLERATIONS --- */
-    .or-separator {
+    #or-separator {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -240,13 +215,13 @@ a, a::before, a::after {
         width: 100%;
     }
 
-    .or-separator div {
+    #or-separator div {
         background-color: var(--ig-grey-light);
         height: 1px;
         width: 50%;
     }
 
-    .or-separator p {
+    #or-separator p {
         color: var(--ig-grey-medium);
         font-size: 12.5px;
         font-weight: 500;
@@ -255,19 +230,19 @@ a, a::before, a::after {
         transform: translateY(5%);
     }
 
-    .fb-login {
+    #fb-login {
         align-items: center;
         display: flex;
         font-weight: bolder;
         padding: .85em;
     }
 
-    .fb-login img {
+    #fb-login img {
         height: 1em;;
         width: 1em;
     }
 
-    .fb-login h5 {
+    #fb-login h5 {
         color: var(--fb-blue);
         font-size: 14px;
         font-weight: 600;
@@ -275,28 +250,28 @@ a, a::before, a::after {
         padding-left: .5em;
     }
 
-    .pw-forgot {
+    #pw-forgot {
         font-size: .75em;
         padding-top: .25em;
     }
 
 /* ---------- SIGN-UP CONTAINER DECLERATIONS ---------- */
-.sign-up-ctr {
+#sign-up-ctr {
     height: 10.25%;
     padding: 1.9em 0;
 }
 
-.sign-up-ctr p {
+#sign-up-ctr p {
     font-size: .875em;
 }
 
-.sign-up-ctr span {
+#sign-up-ctr span {
     color: var(--ig-blue);
     font-weight: 500;
 }
 
 /* ---------- GET APP CONTAINER DECLERATIONS ---------- */
-.get-app-ctr {
+#get-app-ctr {
     background-color: transparent;
     border: none;
     height: 21.35%;
@@ -304,65 +279,48 @@ a, a::before, a::after {
     margin-top: .65em;
 }
 
-.get-app-ctr p {
+#get-app-ctr p {
     font-size: .9em;
     padding: .55em 0 .25em;
 }
 
-.get-app-ctr > div {
+#get-app-ctr > div {
     display: flex;
 }
 
-.get-app-ctr div img {
+#get-app-ctr div img {
     height: 2.5em;
     margin: 1.05em .25em .5em;
 }
 
-    /* --- ALTERNATIVE GET APP IMAGES DESIGN --- */
-    /* .get-app-ctr input {
-        height: 4em;
-        width: 5em;
-    }
-
-    .get-app-ctr #app-store {
-        background-image: url(./images/IG-app-store-button.png);
-        background-size: cover;
-    }
-
-    .get-app-ctr #google-play {
-        background-image: url(./images/IG-Google-Play-Button.png);
-        background-size: cover;
-        background-position: center;
-    } */
-
 /* ---------- FOOTER DECLERATIONS ---------- */
 
-.footer-div-ctr {
+#footer-ctr {
     position: relative;
     padding: 0 2em;
 }
 
-.footer-div-ctr div {
+#footer-ctr div {
     text-align: center;
 }
 
-.footer-div-ctr > div:last-child {
+#footer-ctr > div:last-child {
     align-items: center;
     display: flex;
     justify-content: center;
     padding: .85em 0 2.9em;
 }
 
-.footer-div-ctr div p {
+#footer-ctr div p {
     white-space: nowrap;
 }
 
-.footer-div-ctr div > * {
+#footer-ctr div > * {
     display: inline-block;
     padding: .215em .53em;
 }
 
-.footer-div-ctr select {
+#footer-ctr select {
     background-color: transparent;
     border: none;
     color:var(--ig-grey-medium);
@@ -385,7 +343,7 @@ a, a::before, a::after {
         margin-top: 0;
     }
 
-    .details-ctr {
+    #details-ctr {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -394,58 +352,57 @@ a, a::before, a::after {
         top: 0;
     }
 
-    .login-ctr,
-    .sign-up-ctr,
-    .get-app-ctr {
+    #login-ctr,
+    #sign-up-ctr,
+    #get-app-ctr {
         background-color: transparent;
         border: none;
         height: auto;
     }
 
-    .login-ctr .logo {
+    #login-ctr #logo {
         margin: 1.1em 0 1.8em;
     }
 
-    .login-ctr .alt-options {
+    #login-ctr #alt-options {
         transform: translateY(.8em);
     }
 
-        .alt-options .fb-login {
+        #alt-options #fb-login {
             transform: translateY(.1em)
         }
 
-    .sign-up-ctr {
+    #sign-up-ctr {
         transform: translateY(.7em);
     }
 
-    .get-app-ctr {
+    #get-app-ctr {
         transform: translateY(-1.3em);
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 876px) {
-    .photos-ctr {
+    #photos-ctr {
         display: block;
         position: relative;
     }
 
-    .photos-ctr img {
+    #photos-ctr img {
         height: 618px;
         transform: translate( -19.2%, -5.3%);
         width: 454px;
     }
 
-    .photos-ctr div > img {
+    #photos-ctr div > img {
+        border: .15em solid rgb(51, 51, 51);
+        border-bottom: .25em solid rgb(51, 51, 51);
+        border-left: .22em solid rgb(51, 51, 51);
+        border-radius: .2em;
         height: 27.1em;
         left: 6.75em;
         position: absolute;
         top: 5.4em;
         width: 15.3em;
-        border: .15em solid rgb(51, 51, 51);
-        border-radius: .2em;
-        border-left: .22em solid rgb(51, 51, 51);
-        border-bottom: .25em solid rgb(51, 51, 51);
     }
 
     @keyframes z-index-shift {
@@ -482,8 +439,6 @@ a, a::before, a::after {
 
     #image-1 {
         animation: z-index-shift 25s 0s infinite;
-        /* transition: 2s; */
-        /* transition-timing-function: ease-in-out; */
         z-index: 4;
     }
 

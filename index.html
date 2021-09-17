@@ -12,7 +12,7 @@
 </head>
 <body>
     <main>
-        <section class="photos-ctr">
+        <section id="photos-ctr">
             <img src="images/IG-phones-original.png" alt="Two smart phone, one black, one white, the white one overlapping the other; both phone screen display example images from the website.">
             <div id="phone-display">
                 <img id="image-1" src="images/IG-phone1.jpg" alt="A woman standing in front of many tall cacti.">
@@ -23,12 +23,12 @@
             </div>
         </section>
 
-        <section class="details-ctr">
-            <div class="login-ctr">
-                <div class="logo">
+        <section id="details-ctr">
+            <div id="login-ctr">
+                <div id="logo">
                     <img src="images/IG-Logo.PNG" alt="Instragram logo; the text reads 'Instagram', written in the platform's iconic cursive font.">
                 </div>
-                <div class="login">
+                <div id="login">
                     <form id="login-form" action="#">
                         <div class="form-group">
                             <input 
@@ -40,7 +40,6 @@
                                 title="Must be a valid phone number, username, or email."
                                 onkeyup="stateHandle()"
                                 required
-                                tabindex="1"
                                 type="text">
                             <label class="floating-label" for="username">Phone number, username, or email</label>
                         </div>
@@ -54,7 +53,6 @@
                                 onkeypress="stateHandle()"
                                 onkeyup="stateHandleUp()"
                                 required
-                                tabindex="2"
                                 type="password">
                             <label class="floating-label" for="password">Password</label>
                             <button id="show-btn" onclick="showPassword()" type="button">Show</button>
@@ -67,45 +65,36 @@
                             value="Log In">
                     </form>
                 </div>
-                <div class="alt-options">
-                    <div class="or-separator">
+                <div id="alt-options">
+                    <div id="or-separator">
                         <div></div>
                         <p>Or</p>
                         <div></div>
                     </div>
-                    <div class="fb-login">
+                    <div id="fb-login">
                         <img src="images/FB-logo.png">
                         <h5><a href="#">Log in with Facebook</a></h5>
                     </div>
-                    <div class="pw-forgot">
+                    <div id="pw-forgot">
                         <p><a href="#">Forgot password?</a></p>
                     </div>
                 </div>
             </div>
-            <div class="sign-up-ctr">
+            <div id="sign-up-ctr">
                 <p>Don't have an account? <span><a href="#">Sign Up</a></span></p>
             </div>
-            <div class="get-app-ctr">
+            <div id="get-app-ctr">
                 <p>Get the app.</p>
                 <div>
                     <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank"><img src="images/IG-app-store-button.png" alt="Download on the App Store"></a>
                     <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb&utm_campaign=loginPage&ig_mid=4179E4D0-FB3D-4ABE-B9F3-4495B781021B&utm_content=lo&utm_medium=badge" target="_blank"><img src="images/IG-Google-Play-Button.png" alt="Get it on Google Play"></a>
                 </div>
-                <!-- ALTERNATIVE GET APP IMAGES DESIGN -->
-                <!-- <form>
-                    <input 
-                        id="app-store"
-                        type="button">
-                    <input
-                        id="google-play" 
-                        type="button">
-                </form> -->
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-div-ctr">
+        <div id="footer-ctr">
             <div>
                 <a href="#">About</a>
                 <a href="#">Blog</a>
