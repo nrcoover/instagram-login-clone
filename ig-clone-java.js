@@ -1,11 +1,11 @@
-// LOGIN BUTTON ENABLE + DISABLE FUNCTION
-
+// GLOBAL VARIABLE DECLERATIONS
 let username = document.querySelector("#username");
 let password = document.querySelector("#password")
 let loginButton = document.querySelector("#login-btn");
 let showButton = document.querySelector("#show-btn");
 let hideButton = document.querySelector("#hide-btn");
 
+// LOGIN BUTTON ENABLE + DISABLE FUNCTION
 loginButton.disabled = true;
 username.addEventListener("change", stateHandle);
 password.addEventListener("change", stateHandle);
@@ -26,6 +26,7 @@ function stateHandleUp() {
   }
 }
 
+// PASSWORD SHOW/HIDE BUTTON SWTICH
 function showPassword() {
   if (password.type === "password") {
     password.type = "text";
