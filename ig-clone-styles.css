@@ -26,6 +26,9 @@ body {
     min-width: 320px;
     font-family: 'Segoe UI','Roboto',Helvetica, Arial, sans-serif;
     overflow-y:scroll;
+
+    /* overflow-x: hidden; */
+    min-width: 700px;
 }
 
 main {
@@ -41,7 +44,7 @@ main {
 
 section {
     height: 610px;
-    margin-top: 3.3em;
+    margin-top: 3.28em;
     width: 350px;
 }
 
@@ -55,8 +58,17 @@ footer {
     width: 100%;
 }
 
+input[type=password]::-ms-reveal
+{
+    display: none;
+}
+
 a, a::before, a::after {
     color: inherit;
+}
+
+a:active {
+  opacity: .6;  
 }
 
 #photos-ctr {
@@ -189,8 +201,8 @@ a, a::before, a::after {
         border-radius: .4em;
         font-size: .875em;
         font-weight: 500;
-        margin: .5em 0 .25em;
-        padding: .38em .7em;
+        margin: .45em 0 .25em;
+        padding: .34em .7em .44em;
     }
 
     #login input[value="Log In"]:hover {
@@ -206,12 +218,16 @@ a, a::before, a::after {
         opacity: 1;
     }
 
+    #login input[value="Log In"]:active {
+        opacity: .6;
+    }
+
     /* --- LOGIN ALT-OPTIONS DECLERATIONS --- */
     #or-separator {
         align-items: center;
         display: flex;
         justify-content: center;
-        margin: .75em 0;
+        margin: .7em 0 .7em;
         width: 100%;
     }
 
@@ -227,31 +243,36 @@ a, a::before, a::after {
         font-weight: 500;
         padding: 0 1.4em;
         text-transform: uppercase;
-        transform: translateY(5%);
+        transform: translateY(.15em);
     }
 
     #fb-login {
         align-items: center;
         display: flex;
         font-weight: bolder;
+        margin-top: .05em;
         padding: .85em;
     }
 
     #fb-login img {
-        height: 1em;;
+        display: inline-block;
+        height: 1em;
+        transform: translateY(.2em);
         width: 1em;
     }
 
     #fb-login h5 {
         color: var(--fb-blue);
+        display: inline-block;
         font-size: 14px;
         font-weight: 600;
         margin: .05em 0 .2em;
-        padding-left: .5em;
+        padding-left: .3em;
     }
 
     #pw-forgot {
         font-size: .75em;
+        color: rgb(16, 42, 97);
         padding-top: .25em;
     }
 
@@ -309,6 +330,7 @@ a, a::before, a::after {
     display: flex;
     justify-content: center;
     padding: .85em 0 2.9em;
+    transform: translateY(.1em);
 }
 
 #footer-ctr div p {
@@ -329,7 +351,7 @@ a, a::before, a::after {
 }
 
 /* ---------- MEDIA QUERIES ---------- */
-@media only screen and (max-width: 450px) {
+/* @media only screen and (max-width: 450px) {
     body {
         overflow-x: hidden;
         min-width: 0;
@@ -379,7 +401,7 @@ a, a::before, a::after {
     #get-app-ctr {
         transform: translateY(-1.3em);
     }
-}
+} */
 
 @media only screen and (min-width: 876px) {
     #photos-ctr {
