@@ -25,10 +25,11 @@ body {
     flex-direction: column;
     min-width: 320px;
     font-family: 'Segoe UI','Roboto',Helvetica, Arial, sans-serif;
-    overflow-y:scroll;
+    overflow-y: scroll;
 
-    /* overflow-x: hidden; */
-    min-width: 700px;
+
+    min-width: 650px;
+    overflow-x: scroll;
 }
 
 main {
@@ -44,7 +45,7 @@ main {
 
 section {
     height: 610px;
-    margin-top: 3.28em;
+    margin-top: 3.3em;
     width: 350px;
 }
 
@@ -201,8 +202,8 @@ a:active {
         border-radius: .4em;
         font-size: .875em;
         font-weight: 500;
-        margin: .45em 0 .25em;
-        padding: .34em .7em .44em;
+        margin: .5em 0 .23em;
+        padding: .36em .7em .42em;
     }
 
     #login input[value="Log In"]:hover {
@@ -227,7 +228,7 @@ a:active {
         align-items: center;
         display: flex;
         justify-content: center;
-        margin: .7em 0 .7em;
+        margin: .75em 0;
         width: 100%;
     }
 
@@ -243,14 +244,13 @@ a:active {
         font-weight: 500;
         padding: 0 1.4em;
         text-transform: uppercase;
-        transform: translateY(.15em);
+        transform: translateY(5%);
     }
 
     #fb-login {
         align-items: center;
         display: flex;
         font-weight: bolder;
-        margin-top: .05em;
         padding: .85em;
     }
 
@@ -330,7 +330,6 @@ a:active {
     display: flex;
     justify-content: center;
     padding: .85em 0 2.9em;
-    transform: translateY(.1em);
 }
 
 #footer-ctr div p {
