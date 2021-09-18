@@ -26,10 +26,6 @@ body {
     min-width: 320px;
     font-family: 'Segoe UI','Roboto',Helvetica, Arial, sans-serif;
     overflow-y: scroll;
-
-
-    min-width: 650px;
-    overflow-x: scroll;
 }
 
 main {
@@ -87,7 +83,7 @@ a:active {
     flex-direction: column;
     height: 62.25%;
     justify-content: center;
-    margin-bottom: .6em;
+    margin-bottom: .65em;
 }
 
 #login-ctr > div {
@@ -102,7 +98,7 @@ a:active {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: .15em auto .4em;
+    margin: .15em auto .42em;
 }
 
 #login-ctr #alt-options,
@@ -153,10 +149,14 @@ a:active {
         }
         
         input:not(:placeholder-shown) + .floating-label {
-            transform: translate(.75em, -3.2em) scale(.8);
+            transform: translate(.75em, -3.15em) scale(.8);
         }
 
-        #username:not(:placeholder-shown),
+        #username:not(:placeholder-shown) {
+            padding-bottom: .3em;
+            padding-top: 1.3em;
+        }
+
         #password:not(:placeholder-shown) {
             padding-bottom: .35em;
             padding-top: 1.25em;
@@ -202,7 +202,7 @@ a:active {
         border-radius: .4em;
         font-size: .875em;
         font-weight: 500;
-        margin: .5em 0 .23em;
+        margin: .5em 0 .2em;
         padding: .36em .7em .42em;
     }
 
@@ -274,6 +274,7 @@ a:active {
         font-size: .75em;
         color: rgb(16, 42, 97);
         padding-top: .25em;
+        transform: translateY(-.1em);
     }
 
 /* ---------- SIGN-UP CONTAINER DECLERATIONS ---------- */
@@ -311,7 +312,7 @@ a:active {
 
 #get-app-ctr div img {
     height: 2.5em;
-    margin: 1.05em .25em .5em;
+    margin: 1em .25em .5em;
 }
 
 /* ---------- FOOTER DECLERATIONS ---------- */
@@ -345,12 +346,13 @@ a:active {
     background-color: transparent;
     border: none;
     color:var(--ig-grey-medium);
+    cursor: pointer;
     font: inherit;
     font-size: inherit;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
-/* @media only screen and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
     body {
         overflow-x: hidden;
         min-width: 0;
@@ -400,7 +402,7 @@ a:active {
     #get-app-ctr {
         transform: translateY(-1.3em);
     }
-} */
+}
 
 @media only screen and (min-width: 876px) {
     #photos-ctr {
