@@ -160,6 +160,7 @@ a:active {
         #password:not(:placeholder-shown) {
             padding-bottom: .35em;
             padding-top: 1.25em;
+            padding-right: 4.19em;
         }
 
         .floating-label {
