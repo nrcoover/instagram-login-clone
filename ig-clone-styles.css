@@ -349,6 +349,31 @@ a:active {
     cursor: pointer;
     font: inherit;
     font-size: inherit;
+    opacity: 0;
+    padding-right: 0;
+    padding-left: 0;
+    transform: translateX(6%);
+    z-index: 10;
+}
+
+#select-carrot-wrap span {
+    position: absolute;
+    display: inline-block;
+    transform: rotate(180deg) translateX(95%) translateY(50%);
+}
+
+#select-carrot {
+    color: var(--ig-grey-medium); 
+    fill: var(--ig-grey-medium);
+}
+
+#select-replace {
+    position: absolute;
+    transform: translateX(-186%);
+}
+
+#meta-gram {
+    transform: translateX(-1%);
 }
 
 /* ---------- MEDIA QUERIES ---------- */
