@@ -310,9 +310,12 @@ a:active {
     display: flex;
 }
 
+#get-app-ctr a {
+    margin: 1em .25em .5em;
+}
+
 #get-app-ctr div img {
     height: 2.5em;
-    margin: 1em .25em .5em;
 }
 
 /* ---------- FOOTER DECLERATIONS ---------- */
